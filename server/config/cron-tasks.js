@@ -29,6 +29,7 @@ module.exports = {
 
 					// process action records
 					for (const record of records.results) {
+						console.log(`strapi-plugin-publisher: publish ${record}`);
 						getPluginService('publicationService').toggle(record, record.mode);
 					}
 				},
